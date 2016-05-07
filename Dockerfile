@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:xenial
 MAINTAINER Sebastian Fialka <sebastian.fialka@sebfia.net>
 
-ENV MONO_VERSION 4.2.1.102
-ENV FSHARP_VERSION 4.0.0.4
+ENV MONO_VERSION 4.2.3.4
+ENV FSHARP_VERSION 4.0.1.1
 ENV FSHARP_PREFIX /usr
 ENV FSHARP_GACDIR /usr/lib/mono/gac
 ENV FSHARP_BASENAME fsharp-$FSHARP_VERSION
@@ -13,7 +13,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
     echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list && \
     echo "deb http://download.mono-project.com/repo/debian alpha main" | sudo tee /etc/apt/sources.list.d/mono-xamarin-alpha.list && \
     apt-get -y update && \
-    apt-get -y --no-install-recommends install mono-devel=$MONO_VERSION-0xamarin1 ca-certificates-mono=$MONO_VERSION-0xamarin1 nuget libtool make automake wget && \
+    apt-get -y --no-install-recommends install mono-devel=$MONO_VERSION-0xamarin2 ca-certificates-mono=$MONO_VERSION-0xamarin2 nuget libtool make automake wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /tmp/src && \
