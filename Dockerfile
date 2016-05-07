@@ -10,8 +10,8 @@ ENV FSHARP_ARCHIVE $FSHARP_VERSION.tar.gz
 ENV FSHARP_ARCHIVE_URL https://github.com/fsharp/fsharp/archive/$FSHARP_ARCHIVE
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
-    echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list && \
-    echo "deb http://download.mono-project.com/repo/debian alpha main" | sudo tee /etc/apt/sources.list.d/mono-xamarin-alpha.list && \
+    echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list && \
+    # echo "deb http://download.mono-project.com/repo/debian alpha main" | tee /etc/apt/sources.list.d/mono-xamarin-alpha.list && \
     apt-get -y update && \
     apt-get -y --no-install-recommends install mono-devel=$MONO_VERSION-0xamarin2 ca-certificates-mono=$MONO_VERSION-0xamarin2 nuget libtool make automake wget && \
     apt-get clean && \
