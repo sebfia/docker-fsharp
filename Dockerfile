@@ -27,5 +27,4 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
     cd ~ && \
     rm -rf /tmp/src
 
-ENTRYPOINT ["/bin/bash"]
 CMD ["fsharpi"]
