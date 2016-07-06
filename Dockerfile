@@ -1,7 +1,7 @@
 FROM ubuntu:xenial
 MAINTAINER Sebastian Fialka <sebastian.fialka@sebfia.net>
 
-ENV MONO_VERSION 4.2.3.4
+ENV MONO_VERSION 4.4.1
 ENV FSHARP_VERSION 4.0.1.1
 ENV FSHARP_PREFIX /usr
 ENV FSHARP_GACDIR /usr/lib/mono/gac
