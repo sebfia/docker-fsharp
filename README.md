@@ -9,4 +9,4 @@ The image contains the latest mono version with F# on ubuntu xenial.
 
 # Versions used:
 * Mono 4.2.3.4
-* F# 4.0.1.1
+* F# 4.0.1.8
